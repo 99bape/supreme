@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&display=swap" rel="stylesheet">
+    <title>SUPREME</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="jquery-animate-css-rotate-scale.js"></script>
+  <script>
+   $(document).ready(function(){
+       
+       $('#menu_slide>li:nth-child(1)').click(function(){      
+          $('body,html').animate({'scrollTop':'1905px'},500)
+       })
+       $('#menu_slide>li:nth-child(2)').click(function(){      
+          $('body,html').animate({'scrollTop':'7100px'},500)
+       })
+       $('#menu_slide>li:nth-child(3)').click(function(){      
+          $('body,html').animate({'scrollTop':'8100px'},500)
+       })
+      
+     
+     intro = 0; 
+    setInterval(function(){
+      intro = intro + 1
+      if(intro==1000) {intro=0 }
+      $('#intro_text1').css({'left':intro})
+      $('#intro_text2').css({'right':intro})
+      $('#intro_text3').css({'left':intro})
+      $('#intro_text4').css({'right':intro})
+    },10) //1000/10 = 1초에 100번 신호
+    $("#scroll>h5").animate({'bottom':'110px'},490,function(){
+           $("#scroll>h5").animate({'bottom':'100px'},490)
+       })
+       
+       setInterval(function(){
+
+        $("#scroll>h5").animate({'bottom':'110px'},490,function(){
+           $("#scroll>h5").animate({'bottom':'100px'},490)
+       })
+       
+       },1000)
+
+      main_age = 0; 
+       $(window).scroll(function(){
+            sc = $(window).scrollTop(); //현재 스크롤 위치
+
+           // store 
+         if( sc >= 8100){ 
+            $('#store_fixed').css({ 'left':  (sc-8000) * -1, 'position':'fixed'  })   
+         }
+         else  { 
+             $('#store_fixed').css({ 'left': 0, 'position':'relative'  })   
+         }
+      // 
+       if( sc<  8100 ) { //초기값
+          $('#la').css({'left':'1000px'})
+         $('#store_ny').css({'top':'-200px'})
+         $('#osk').css({'left':'1000px'})
+         $('#store_pr').css({'top':'-200px'})
+       }
+       else if( sc >= 8100 && sc <9000){  
+            $('#la').css({'left':'900px'})
+         $('#store_ny').css({'top':'500px'})
+         }
+       else if( sc >= 9000 && sc <10000){ 
+            $('#osk').css({'left':'900px'})
+         $('#store_pr').css({'top':'500px'})
+         }
+
+
+
+
+
+            $('#scroll0').text(sc)
+            if(sc>=10 && sc<=1800){
+              $('#intro>video').css({'transform':'scale(' + ( ( (sc-10) *0.0005) +0.2) +')'})
+            }   
+            else if(sc>1800) {
+              main_age = main_age + 1;// 0 1 2 3 4 5~
+              if( main_age == 1){
+                $('#main').animate({'top':'1900px'},300)
+              }
+              else if(sc>2000){
+              $('#main_scroll>video').css({'position':'fixed'})
+            }
+          
+          }
+          /////////////////////////
+          if(sc>2300){
+            $('#main_scroll2>li:nth-child(2)').css({'opacity': '1'})
+          }
+          if(sc<2200){
+            $('#main_scroll2>li:nth-child(2)').css({'opacity': '0'})
+          }
+          if(sc>2700){
+            $('#main_scroll3>li:nth-child(1)').css({'opacity': '1'})
+          }
+          if(sc<2900){
+            $('#main_scroll3>li:nth-child(1)').css({'opacity': '0'})
+          }
+          if(sc>3200){
+            $('#main_scroll4>li:nth-child(2)').css({'opacity': '1'})
+          }
+          if(sc<3400){
+            $('#main_scroll4>li:nth-child(2)').css({'opacity': '0'})
+          }
+          if(sc>3700){
+            $('#main_scroll5>li:nth-child(1)').css({'opacity': '1'})
+          }
+          if(sc<3900){
+            $('#main_scroll5>li:nth-child(1)').css({'opacity': '0'})
+          }
+          if(sc>4100){
+            $('#main_scroll6>li:nth-child(2)').css({'opacity': '1'})
+          }
+          if(sc<4300){
+            $('#main_scroll6>li:nth-child(2)').css({'opacity': '0'})
+          }
+          if(sc>4600){
+            $('#main_scroll7>li:nth-child(1)').css({'opacity': '1'})
+          }
+          if(sc<4800){
+            $('#main_scroll7>li:nth-child(1)').css({'opacity': '0'})
+          }
+
+          if(sc>=5000 && sc<=6700){
+              $('#main_scroll>video').css({'transform':'scale(' + ( ( (sc-5000) *0.0005) +0.2) +')' })
+          }
+
+      if( sc>=1800 && sc <5000){
+          $('#main_scroll>video').css({'transform':'scale(0.2)' })
+        }
+        else if( sc<1800 ){
+          $('#main_scroll>video').css({'transform':'scale(0)' })
+        }
+          if(sc>6800){
+            scroll_age = scroll_age +1;
+            if(scroll_age == 1){
+            $('#fw22').animate({'top':'7100px'},300)
+          }
+          }
+        
+
+
+        })
+        setInterval(function(){
+          $("#megaphone").animate({'scale':'1'},490,function(){
+           $("#megaphone").animate({'scale':'1.2'},490)
+           $('#skate').animate({'left':'500px'},800,function(){
+            $('#skate').animate({'left':'1000px'},800)
+           })
+        })
+      },3000)
+
+      $('#item>li').click(function(){
+        $('#popup>div').eq(   $(this).index()   ).show()
+      })
+      $('.close').click(function(){
+        $(this).parent('div').hide()
+      })
+      
+      
+
+   });
+  </script>
+  <style>
+      * { margin: 0; padding: 0; list-style: none; }
+      a { text-decoration: none; color: inherit;}
+      body { height: 10000px;}
+      #intro { width: 100%; height: 100%; overflow: hidden; background-color: #000; position: relative; position: fixed; }
+      #intro>video {  position: absolute; width: 1920px; height: 1080px; left: 50%; top: 50%; margin-left: -980px; margin-top: -540px; transform: scale(0.2); z-index: 9999;}
+      #intro_text1 {width: 1920px; color: #fff; font-size: 50px; position: absolute; left: 0px; top: 0px; opacity: 0.3;-webkit-text-stroke:1px #fff; color:transparent;}
+      #intro_text1>li {float: left; margin-left: 10px; }
+      #intro_text2 {width: 1920px; color: #fff; font-size: 50px; position: absolute; right: 0px; top: 0px;  font-weight: 900;-webkit-text-stroke:1px #fff; color:transparent; }
+      #intro_text2>li {float: left; margin-left: 10px; }
+      #intro_text3 {width: 1920px; color: #fff; font-size: 50px; position: absolute; left: 0px; bottom: 0; opacity: 0.3;-webkit-text-stroke:1px #fff; color:transparent;}
+      #intro_text3>li {float: left; margin-left: 10px; }
+      #intro_text4 {width: 1920px; color: #fff; font-size: 50px; position: absolute; right: 0px; bottom: 0;  font-weight: 900; -webkit-text-stroke:1px #fff; color:transparent;}
+      #intro_text4>li {float: left; margin-left: 10px; }
+      
+      #scroll>h6 { color: #fff; width: 100%; position: fixed; bottom: 150px; text-align: center; font-size: 16px;}
+      #scroll>h5 { color: #fff; width: 100%; position: fixed; bottom: 120px; text-align: center; font-size: 20px;}
+      #scroll { position: fixed; left: 0; top: 0; font-size: 100px; color: #fff;}
+      #scroll0 { position: fixed; left: 0; top: 0; font-size: 100px; color: #fff; z-index: 99999999;}
+      #wrap { width: 100%; }
+      #main {width: 100%; height: 10000px; background: url(images/bg.jpeg); position: absolute; top: 3000px; left: 0; font-family: 'Shadows Into Light', cursive;  }
+      header { width: 100%; height: 110px; margin: auto; background-color:rgba(0,0,0,0.2); }
+      .logo { width: 300px; height: 100px; margin-top: 2px;  float: left;}
+      .logo>img { width: 100%; vertical-align: middle;}
+      .menu_icon { width: 100px; height: 100px; float: right;}
+
+      #menu_slide { position: absolute; width: 400px; height: 500px; background-color: #fff; right: 0; top: 110px; text-align: center; z-index: 99999; }
+      #menu_slide>li { width: 400px; height: 100px; line-height: 50px; font-size: 50px;}
+
+
+      #main_scroll { width: 100%; height: 500px; position: relative;}
+      #main_scroll>video {position: absolute; width: 1920px; height: 1080px; left: 50%; top: 50%; margin-left: -980px; margin-top: -540px; transform: scale(0.2);}
+      #main_scroll2 { width: 1000px; height: 200px; margin-left: 100px; }
+      #main_scroll2>li:nth-child(1) {width: 200px; height: 200px; background: url(images/main2.jpeg) center no-repeat; background-size: cover;  float: left; }
+      #main_scroll2>li:nth-child(2) { width: 500px; height: 200px; margin-top: 30px; color: #fff; float: left; text-align: center;font-size: 20px; opacity: 0;} 
+
+      #main_scroll3 {width: 1000px; height: 200px; float: right; margin-top: 300px; }
+      #main_scroll3>li:nth-child(1) {width: 700px; height: 200px;  float: left; color: #fff; float: left; text-align: center;font-size: 20px; margin-top: 50px; margin-right: 30px;}
+      #main_scroll3>li:nth-child(2) { width: 200px; height: 200px;  float: left; background: url(images/main3.jpg) center no-repeat; background-size: cover;} 
+
+      #main_scroll4 { width: 1000px; height: 200px; margin-left: 100px; margin-top: 800px;}
+      #main_scroll4>li:nth-child(1) {width: 200px; height: 200px; background: url(images/main4.jpg) center no-repeat; background-size: cover; float: left;  }
+      #main_scroll4>li:nth-child(2) { width: 700px; height: 200px;  color: #fff; float: left; text-align: center;font-size: 20px; margin-left: 20px; margin-top: 50px;} 
+
+      #main_scroll5 {width: 1000px; height: 200px; float: right; margin-top: 300px; }
+      #main_scroll5>li:nth-child(1) {width: 700px; height: 200px;  float: left; color: #fff; float: left; text-align: center;font-size: 20px; margin-top: 50px; margin-right: 30px;}
+      #main_scroll5>li:nth-child(2) { width: 200px; height: 200px;  float: left; background: url(images/main5.jpg) center no-repeat; background-size: cover;} 
+
+      #main_scroll6 { width: 1000px; height: 200px; margin-left: 100px; margin-top: 800px;}
+      #main_scroll6>li:nth-child(1) {width: 200px; height: 200px; background: url(images/main6.jpeg) center no-repeat; background-size: cover; float: left;  }
+      #main_scroll6>li:nth-child(2) { width: 700px; height: 200px;  color: #fff; float: left; text-align: center;font-size: 20px; margin-left: 20px; margin-top: 50px;} 
+
+      #main_scroll7 {width: 1000px; height: 200px; float: right; margin-top: 300px; }
+      #main_scroll7>li:nth-child(1) {width: 700px; height: 200px;  float: left; color: #fff; float: left; text-align: center;font-size: 20px; margin-top: 50px; }
+      #main_scroll7>li:nth-child(2) { width: 200px; height: 200px;  float: left; background: url(images/main7.jpg) center no-repeat; background-size: cover;} 
+
+      #fw22 { width: 100%; height: 1000px; background-color: #bbb; position: absolute; top: 7100px; left: 0; overflow: hidden; position: relative;}
+      
+      #item { width: 1000px; margin: auto; margin-top: 150px;  }
+      #item>li { width: 160px; height: 160px; float: left; overflow: hidden; }
+      #item>li:hover>img { opacity: 1;}
+      #item>li>img { width: 100%; transform: scale(3); opacity: 0.5;}
+      #item>li:nth-child(1)>img {transform: scale(3) translate(0px, -30px);}
+      #item>li:nth-child(2)>img {transform: scale(2) translate(0px, 20px);}
+      #item>li:nth-child(3)>img {transform: scale(4) translate(20px, 30px);}
+
+      #megaphone { width: 200px; height: 200px; position: absolute; left: 200px; top: 120px; }
+      #megaphone>img { width: 100%; }
+      #skate { width: 300px; height: 100px; position: absolute; left: 500px; top: 80px; }
+      #skate>img { width: 100%;}
+
+
+
+      .popup1 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup1>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .item_text { width: 800px; height: 100px; position: absolute; left: 0; right: 0; bottom: 100px; margin: auto; font-size: 20px;}
+      .close { width: 50px; height: 50px; background-color: #000; color: #fff; position: absolute; right: 500px; bottom: 150px;  }
+      .popup2 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup2>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup3 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup3>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup4 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup4>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup5 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup5>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup6 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup6>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup7 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup7>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup8 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup8>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup9 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup9>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup10 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup10>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup11 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup11>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup12 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup12>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup13 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup13>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup14 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup14>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup15 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup15>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup16 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup16>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup17 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup17>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup18 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup18>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup19 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup19>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup20 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup20>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup21 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup21>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup22 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup22>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup23 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup23>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+      .popup24 { display: none; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: #fff; }
+      .popup24>img { position: absolute; left: 0; right: 0; top: 50px; margin: auto; width: 500px; height: 500px; }
+     
+     
+      
+
+      #store { width: 100%; height: 10000px; background: url(images/bg2.jpg); position: absolute; left: 0; top: 8100px; overflow: hidden;  }
+   /* 스크롤을 할 수 있도록 height: 10000px; 을 부여 */
+     #store_fixed { width: 8000px; height: 1000px; margin: 20px; left: 0; top: 0;  z-index: 99999999999;   font-family: 'Alumni Sans Inline One', cursive; position: relative; }
+     
+      #store_fixed>ul { width: 100%; height: 500px; }
+     #store_fixed>ul>li { width: 20%; height: 1000px;  box-sizing: border-box; float: left;  position: relative; border: 1px solid #000;} 
+     #store_fixed>ul>li>h5 { font-size: 50px; font-weight: 400; }
+    
+    
+     #store_fixed>ul>li>#la { position: absolute; top: 100px; left: 1000px; transition: 0.3s;} /* (텍스트) 왼쪽에서 오른쪾으로  */
+     #store_fixed>ul>li>.store_img { width: 500px; height: 500px; margin-top: 100px; margin-left: 500px;}  /* 고정 */
+     #store_fixed>ul>li>#store_ny { width: 300px; height: 300px; position: absolute; top: -200px;  transition: 0.3s;}  /* (이미지) 위에서 아래로 */
+     
+     
+     #store_fixed>ul>li>#store_pr { width: 300px; height: 300px;  position: absolute; top: -200px;  transition: 0.3s;} /* (이미지) 위에서 아래로  */
+
+
+    
+
+    /* #custom { width: 100%; height: 1000px; background-color: #000; position: absolute; left: 0; top: 9100px;} */
+
+   
+
+
+
+
+
+       
+      
+  </style>
+</head>
+   <div id="intro">
+      <video src="images/bg_video.mp4" autoplay muted loop></video>
+      <ul id="intro_text1">
+        <li>supreme</li>
+        <li>street</li>
+        <li>borad</li>
+        <li>supreme</li>
+        <li>street </li>
+        <li>borad</li>
+        <li>skate </li>
+        <li>supreme</li>
+        <li>borad </li>
+        <li>skate </li>
+        <li>street</li>   
+      </ul>
+      <ul id="intro_text2">
+        <li>supreme</li>
+        <li>street</li>
+        <li>borad</li>
+        <li>supreme</li>
+        <li>street </li>
+        <li>borad</li>
+        <li>skate </li>
+        <li>supreme</li>
+        <li>borad </li>
+        <li>skate </li>
+        <li>street</li>     
+      </ul>
+      <ul id="intro_text3">
+        <li>supreme</li>
+        <li>street</li>
+        <li>borad</li>
+        <li>supreme</li>
+        <li>street </li>
+        <li>borad</li>
+        <li>skate </li>
+        <li>supreme</li>
+        <li>borad </li>
+        <li>skate </li>
+        <li>street</li>
+              
+      </ul>
+      <ul id="intro_text4">
+        <li>supreme</li>
+        <li>street</li>
+        <li>borad</li>
+        <li>supreme</li>
+        <li>street </li>
+        <li>borad</li>
+        <li>skate </li>
+        <li>supreme</li>
+        <li>borad </li>
+        <li>skate </li>
+        <li>street</li>
+                
+      </ul>
+    
+        
+    
+      <div id="scroll">
+        <h6>SCROLL</h6>
+        <h5>⌵</h5>
+    </div>
+    </div>
+
+
+    
+<!-- 메인시작 -->
+<div id="wrap">
+<div id="main">
+      <header>
+      <div class="logo"><img src="images/logo.png" alt=""></div>
+      <div class="menu_icon"><img src="images/menu_icon.png" alt=""></div>
+      </header>
+      <!-- 메뉴 -->
+      <ul id="menu_slide">
+        <li>HOME</li>
+        <li>FW22</li>
+        <li>STORE</li>
+        <li>collabo</li>
+        <li>custom</li>
+      </ul>
+      <div id="main_scroll">
+          <video src="images/bg_video_1.mp4" autoplay loop muted></video>
+      </div>
+      <ul id="main_scroll2">
+        <li></li>
+        <li> <h3>James Jebbia</h3> <br> <br> <br>
+          July 22, 1963 (age 58) <br>
+          New York City, New York, U.S</li>
+      </ul>
+      <ul id="main_scroll3">
+        <li>Supreme is an American clothing and skateboarding lifestyle brand established in <br> New York City in April 1994.  </li>
+        <li></li>
+      </ul>
+      <ul id="main_scroll4">
+        <li></li>
+        <li>Supreme opens its doors on Lafayette street in downtown Manhattan and became the home of New York City skate culture.</li>
+      </ul>
+      <ul id="main_scroll5">
+        <li>At its core was a group of neighborhood kids, New York skaters, and local artists who became the store’s staff, crew, and customers</li>
+        <li></li>
+      </ul>
+      <ul id="main_scroll6">
+        <li></li>
+        <li>Supreme grew to embody downtown culture, and play an integral part in its constant regeneration</li>
+      </ul>
+      <ul id="main_scroll7">
+        <li>The official website of Supreme.</li>
+        <li></li>
+      </ul> 
+    </div> <!-- 메인끝-->
+      <!-- fw22 시작 -->
+    <div id="fw22">
+        <h1>#1</h1>
+        <ul id="item">
+          <li><img src="images/item1.jpg" alt=""> </li>
+          <li><img src="images/item2.jpg" alt=""> </li>
+          <li><img src="images/item3.jpg" alt=""> </li>
+          <li><img src="images/item4.jpg" alt=""> </li>
+          <li><img src="images/item5.jpg" alt=""> </li>
+          <li><img src="images/item6.jpg" alt=""> </li>
+          <li><img src="images/item7.jpg" alt=""> </li>
+          <li><img src="images/item8.jpg" alt=""> </li>
+          <li><img src="images/item9.jpg" alt=""> </li>
+          <li><img src="images/item10.jpg" alt=""> </li>
+          <li><img src="images/item11.jpg" alt=""> </li>
+          <li><img src="images/item12.jpg" alt=""> </li>
+          <li><img src="images/item13.jpg" alt=""> </li>
+          <li><img src="images/item14.jpg" alt=""> </li>
+          <li><img src="images/item15.jpg" alt=""> </li>
+          <li><img src="images/item16.jpg" alt=""> </li>
+          <li><img src="images/item17.jpg" alt=""> </li>
+          <li><img src="images/item18.jpg" alt=""> </li>
+          <li><img src="images/item19.jpg" alt=""> </li>
+          <li><img src="images/item20.jpg" alt=""> </li>
+          <li><img src="images/item21.jpg" alt=""> </li>
+          <li><img src="images/item22.jpg" alt=""> </li>
+          <li><img src="images/item23.jpg" alt=""> </li>
+          <li><img src="images/item24.jpg" alt=""> </li>
+         
+        </ul>
+        <img src="images/mgp.png" alt="" id="megaphone">
+        <img src="images/bd.png" alt="" id="skate">
+        <!-- item popup -->
+        
+      <div id="popup">
+      <div class="popup1">
+          <img src="images/item1.jpg" alt="">
+          <div class="item_text">Faux fur with printed logo pattern and jacquard logo viscose lining. <br> Snap front closure with welt hand pockets at lower front and interior chest pocket.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup2">
+          <img src="images/item2_2.jpg" alt="">
+          <div class="item_text">This MA-1 Jacket from the SUPREME Spring/Summer 2022 Collection came to life through a collaboration with Alpha Industries, known for its authentic bomber jackets and legacy of innovation.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup3">
+          <img src="images/item3.jpg" alt="">
+          <div class="item_text">Water resistant nylon with crystal studded pattern, down filled quilted baffles and taffeta lining. Full zip closure with welt zip hand pockets at lower front and interior zip pocket</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup4">
+          <img src="images/item4.jpg" alt="">
+          <div class="item_text">Check out our lil kim shirts selection for the very best in unique or custom, handmade pieces from our shops.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup5">
+          <img src="images/item5_2.jpg" alt="">
+          <div class="item_text">AOI Glow-in-the-Dark Track Jacket ... Water resistant Supplex® nylon taslan with mesh and taffeta lining. Full zip closure with welt hand pockets at lower front.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup6">
+          <img src="images/item6.jpg" alt="">
+          <div class="item_text">w. All cotton 15 oz. denim with chainstitch embroidered graphic throughout. Full zip closure with welt hand pockets at lower front.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup7">
+          <img src="images/item7.jpg" alt="">
+          <div class="item_text">All cotton 15 oz. denim with chainstitch embroidered graphic throughout. Full zip closure with welt hand pockets at lower front.</div>
+          <button class="close">back</button></div>
+       
+        <div class="popup8">
+          <img src="images/item8.jpg" alt="">
+          <div class="item_text">All cotton denim with jacquard logo pattern, filled quilted baffles and taffeta lining. Full zip closure with welt zip hand pockets at lower front and interior ...</div>
+          <button class="close">back</button></div>
+        <div class="popup9">
+          <img src="images/item9.jpg" alt="">
+          <div class="item_text">Faux fur with printed logo pattern and jacquard logo viscose lining. <br> Snap front closure with welt hand pockets at lower front and interior chest pocket.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup10">
+          <img src="images/item10.jpg" alt="">
+          <div class="item_text">Full zip closure with hidden velcro placket. Welt zip hand pockets at lower front and zip chest pocket. Interior elastic shockcord at fixed hood and hem.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup11">
+          <img src="images/item11.jpg" alt="">
+          <div class="item_text">Umbro and Supreme have collaborated on a range of tracksuits for the New York based brand's Spring Summer 22 collection.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup12">
+          <img src="images/item12.jpg" alt="">
+          <div class="item_text">Cotton blend with hand-crocheted pattern, cotton lining and poly sleeve lining. Full zip closure and hand pockets at lower front</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup13">
+          <img src="images/item13.jpg" alt="">
+          <div class="item_text">Brushed acrylic with button front closure and knit pattern. Hand pockets at lower front with embroidered logo on left pocket.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup14">
+          <img src="images/item14.jpg" alt="">
+          <div class="item_text">Nate Lowman Hooded Sweatshirt. Cotton fleece. Original artwork by Nate Lowman.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup15">
+          <img src="images/item15.jpg" alt="">
+          <div class="item_text">Logo Trim Zip Up Cardigan Merino wool blend with full zip closure and hand pockets at lower front. Knit logo trim at closure, pockets and hem.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup16">
+          <img src="images/item16.jpg" alt="">
+          <div class="item_text">Credit Cards Sweater. Wool blend. Original artwork by Lee Kan Kyo.</div>
+          <button class="close">back</button>
+        </div>  
+        <div class="popup17">
+          <img src="images/item17.jpg" alt="">
+          <div class="item_text">Supreme®/Mitchell & Ness® Stadium Satin Varsity Jacket. Satin with printed graphic, fill and quilted cotton twill lining.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup18">
+          <img src="images/item18.jpg" alt="">
+          <div class="item_text">All cotton classic Supreme t-shirt with printed graphic on front.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup19">
+          <img src="images/item19.jpg" alt="">
+          <div class="item_text">All cotton 13 oz. denim with button front closure. Patch pockets at lower front and chest with button flap closure. </div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup20">
+          <img src="images/item20.jpg" alt="">
+          <div class="item_text">Supreme®/Vanson Leathers® Cordura® Mesh Jacket. Cordura® mesh with jersey mesh lining.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup21">
+          <img src="images/item21.jpg" alt="">
+          <div class="item_text"> Supreme streetwear on StockX including the Supreme Waves Zip Pullover Light Green from SS22.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup22">
+          <img src="images/item22.jpg" alt="">
+          <div class="item_text">Supreme's Spring/Summer 2022 collection includes everything from 'Gummo' apparel to accessories like a boat and Airstream trailer.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup23">
+          <img src="images/item23.jpg" alt="">
+          <div class="item_text">Special Offer S/S Top. All cotton jersey. Original artwork by Lee Kan Kyo.</div>
+          <button class="close">back</button>
+        </div>
+        <div class="popup24">
+          <img src="images/item24.jpg" alt="">
+          <div class="item_text">All cotton jersey crewneck with embroidered logo patch on chest.</div>
+          <button class="close">back</button>
+        </div>
+      </div>
+    </div>
+    <!-- fw22 끝 -->
+     <div id="store"> 
+    <div id="store_fixed">
+        <ul>
+           <li>
+             <h5 id="la">Los Angeles, America</h5>
+             <img src="images/store1.jpg" alt="" class="store_img" >
+             <img src="images/ny.jpg" alt="" id="store_ny">
+            
+            </li>
+           <li>
+            <h5 id="osk">Osaka, Japan</h5>
+             <img src="images/stroe2.png" alt="" class="store_img">
+             <img src="images/pr.jpg" alt="" id="store_pr">
+            </li>
+           <li>
+            <h5 id="pr">Paris, France</h5>
+             <img src="images/store3.jpg" alt="" class="store_img">
+            </li>
+           <li>
+            <h5 id="ml">Milan, Italy</h5>
+             <img src="images/store4.jpg" alt="" class="store_img">
+            </li>
+           <li>
+            <h5 id="hj">Harajuku, Japan</h5> 
+             <img src="images/store5.jpg" alt="" class="store_img">
+            </li>
+           
+        </ul>
+     </div>
+    
+    </div>
+<!-- store_fixed 방식으로 store 밖으로 뺀다 -->
+     
+   <!-- stroe 끝 -->
+ <div id="custom">
+
+ </div>
+
+   <!--wrap 끝  -->
+   </div>   
+  
+    <h1 id="scroll0"></h1> 
+
+
+
+</body>
+</html>
